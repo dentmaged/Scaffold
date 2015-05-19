@@ -1,0 +1,8 @@
+name: Scaffold
+description: A plugin for managing a build server.
+main: net.avicus.scaffold.Scaffold
+version: 1.0.0
+authors: [Avicus]
+commands:
+  scaffold:
+    description: Scaffold plugin commands.

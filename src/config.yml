@@ -1,0 +1,5 @@
+# The directory to save the zipped world file (relative to Craftbukkit directory)
+save-directory: saves
+
+# Message to send to players when successfully saved.
+save-message: "Success: saves/<file>"
