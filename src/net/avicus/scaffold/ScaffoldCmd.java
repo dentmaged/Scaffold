@@ -25,7 +25,7 @@ public class ScaffoldCmd implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.RED + "/scaffold <save/clone/reload/version> (args...)");
+            usage(sender);
             return true;
         }
 
@@ -117,8 +117,16 @@ public class ScaffoldCmd implements CommandExecutor {
 
             sender.sendMessage(ChatColor.GOLD + "Cloned repository to " + name + "!");
         }
+        else {
+            usage(sender);
+            return true;
+        }
 
         return true;
+    }
+
+    private void usage(CommandSender sender) {
+        sender.sendMessage(ChatColor.RED + "/scaffold <save/clone/reload/version> (args...)");
     }
 
 }
