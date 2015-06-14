@@ -68,7 +68,10 @@ public class ScaffoldCmd implements CommandExecutor {
             }
 
             String url = args[1];
-            String name = url.split("/")[url.split("/").length - 1];
+            String name = url.split("/")[url.split("/").length - 1
+            
+            if (name.endsWith(".git"))
+                name = name.substring(0, name.length - 4);
 
             if (args.length > 2)
                 name = args[2];
